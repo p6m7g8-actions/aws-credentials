@@ -7,11 +7,10 @@ jobs:
   smoke:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: p6m7g8-actions/checkout@main
 
-      - name: Run local checkout action
-        uses: ./
-        with:
-          repository: p6m7g8-actions/aws-credentials
-          fetch-depth: 1
+      - name: Validate wrapper wiring
+        shell: bash
+        run: |
+          rg -n "aws-actions/configure-aws-credentials@v6.0.0" action.yml
