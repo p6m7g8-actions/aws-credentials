@@ -1,0 +1,17 @@
+name: Smoke
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: p6m7g8-actions/checkout@main
+
+      - name: Run local checkout action
+        uses: ./
+        with:
+          repository: p6m7g8-actions/aws-credentials
+          fetch-depth: 1
