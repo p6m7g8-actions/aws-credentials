@@ -19,8 +19,9 @@ inputs:
     required: false
     default: GitHubActions
   audience:
-    description: Audience for OIDC (China partitions)
+    description: Audience for OIDC (defaults to sts.amazonaws.com; override for China partitions)
     required: false
+    default: sts.amazonaws.com
   mask-aws-account-id:
     description: Whether to mask account id in logs
     required: false
