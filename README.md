@@ -7,7 +7,7 @@
 
 ```yml
       - name: Configure AWS Credentials
-        uses: p6m7g8-actions/aws-credentials@main
+        uses: p6m7g8-actions/p6-aws-setup@main
         with:
           role-to-assume: arn:aws:iam::123456789012:role/github-actions
           aws-region: us-east-1
